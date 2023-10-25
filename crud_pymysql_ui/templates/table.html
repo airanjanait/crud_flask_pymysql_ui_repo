@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <th> Full name</th>
+            <th> Email</th>
+            <th> Password</th>
+            <th> Retype_password</th>
+        </tr>
+        {% for i in data%}
+        <tr>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td>{{i[4]}}</td>
+        <td><button> <a href="/fetchbyid/{{i[0]}}"> UPDATE</a></button></td>
+          <td> <button> <a href="/deletebyid/{{i[0]}}"> DELETE</a></button></td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>

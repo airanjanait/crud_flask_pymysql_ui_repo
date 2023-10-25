@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Registration Page</title>
+</head>
+<body class="hold-transition register-page">
+<div class="register-box">
+  <div class="register-logo">
+  </div>
+  <div class="card">
+    <div class="card-body register-card-body">
+      <p class="login-box-msg">Register a new membership</p>
+<!--this is your ACTION AND POST-->
+
+      <form action="/fetchbyid/{{row[0]}}" method='post'>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control"  name="full_name" value={{row[1]}}>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <input type="email" class="form-control"  name="email" value={{row[2]}}>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control"  name"password" value={{row[3]}}>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control"  name="retype_password" value={{row[4]}}>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+          <!-- /.col -->
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">update</button>
+          </div>
+          <!-- /.col -->
+      </form>
+
+</div>
+</body>
+</html>
